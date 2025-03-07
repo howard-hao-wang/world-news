@@ -2,78 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>World News Daily</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Howard H. WANG</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header, footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #eee;
-      margin-bottom: 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-    ul {
-      list-style: none;
+      margin: 0;
       padding: 0;
     }
-    li {
-      padding-bottom: 15px;
-      border-bottom: 1px dashed #ccc;
-      margin-bottom: 15px;
+    header {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
     }
-    .date {
-      font-size: 0.9em;
-      color: #888;
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
     }
-    a {
-      color: #0066cc;
+    nav a {
+      color: white;
+      padding: 14px 20px;
       text-decoration: none;
+      text-align: center;
     }
-    a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      background-color: #575757;
     }
-    @media (max-width: 600px) {
-      body { padding: 10px; }
+    section {
+      display: flex;
+      padding: 20px;
+    }
+    .about-image {
+      flex: 1;
+      max-width: 300px;
+      margin-right: 20px;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .about-text {
+      flex: 2;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+    .visit-count {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>World News Daily</h1>
-    <p>Concise global updates every day.</p>
+    <h1>Howard H. WANG</h1>
+    <p>Welcome! I am a computational social scientist with expertise in political science, data analysis, and interdisciplinary research.</p>
   </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="book_project.html">Book Project</a>
+    <a href="research.html">Research Papers</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="academic_activities.html">Academic Activities</a>
+    <a href="resources.html">Resources</a>
+    <a href="lifestyle.html">Lifestyle</a>
+  </nav>
 
+  
   <section>
-    <h2>Latest News</h2>
-    <ul>
-      <!-- Add your daily news items here -->
-      <li>
-        <span class="date">March 7, 2025</span><br>
-        <strong>Headline 1:</strong> Short summary of news item one. <a href="#">[Details]</a>
-      </li>
-      <li>
-        <span class="date">March 7, 2025</span><br>
-        <strong>Headline 2:</strong> Short summary of news item two. <a href="#">[Details]</a>
-      </li>
-      <!-- Add new items above this line -->
-    </ul>
+    <div class="about-image">
+      <img src="hw_graduation_photo.png" alt="Howard H. WANG">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am currently a Postdoctoral Fellow in the Department of Public and International Affairs at City University of Hong Kong. 
+      </p>
+      <p>
+        I earned my Ph.D. in Political Science from The Chinese University of Hong Kong (CUHK) in July 2023. 
+      </p>
+      <p>
+        Before entering academia, I was deeply engaged in grassroots governance for 5 years. 
+        In 2012, I began working as a college village official in Wuhan, where I narrowly avoided injury during clashes with protesters 
+        over the demolition of an industrial park. This incident prompted me to question how developing countries integrate sources of 
+        instability into formal political institutions. Later, as a civil servant in Guangzhou (2013–2017), I observed how well-institutionalized 
+        online petition channels provided partial solutions.
+      </p>
+      <p>
+        These experiences led me to ask a big question: <em>How can a revolutionary regime move from a campaign-style governance to a more 
+        institutionalized form of governance?</em>
+      </p>
+      <p>
+        My primary research focus is on political institutions and public policies in China. 
+      </p>
+      <p>
+        My methodological interests include computational social science (including web scraping, text mining, image analysis, and social network analysis), survival analysis (also known as event history analysis), panel data analysis, and survey data analysis.
+      </p>
+      <p>You can reach me at hwang698[at]cityu.edu.hk.</p>
+    </div>
   </section>
-
   <footer>
-    <p>&copy; 2025 Your Name or Organization</p>
+    <p>Copyright © Howard H. WANG, 2025</p>
   </footer>
+
+  <script>
+    // Initialize visit count
+    let visitCount = localStorage.getItem('visitCount') ? parseInt(localStorage.getItem('visitCount')) : 0;
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+    document.getElementById('visit-count').textContent = 'Visit times: ' + visitCount;
+  </script>
 </body>
 </html>
